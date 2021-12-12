@@ -17,9 +17,11 @@ class CheckStatus
     public function handle(Request $request, Closure $next)
     {
 
-        // if ($request->input('password') != 'ismayilmi') {
-        //     return redirect('adminlogin');
-        // }
+        // dd($request);
+        if ($request->input('password') != 'ismayilmi') {
+            return response()->view('adminlogin'); 
+            
+        }
         return $next($request);
     }
 }

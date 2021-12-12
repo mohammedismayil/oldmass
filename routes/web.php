@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('adminlogin');
+    return view('welcome');
 });
-Route::get('/test', function () {
-    // return view('adminlogin');
-    return 'Hello World';
-});
+
+Route::get('/admin', function () {
+    
+    return view('welcome');
+})->middleware('checkStatus');
