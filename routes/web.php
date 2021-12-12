@@ -21,3 +21,5 @@ Route::get('/admin', function () {
     
     return view('welcome');
 })->middleware('checkStatus');
+
+Route::post('/loginadmin','App\Http\Controllers\AdminController@loginAdmin');

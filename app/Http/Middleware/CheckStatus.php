@@ -18,10 +18,12 @@ class CheckStatus
     {
 
         // dd($request);
-        if ($request->input('password') != 'ismayilmi') {
-            return response()->view('adminlogin'); 
+        if ($request->session()->get('isAdminLoggedIn')=='true') {
             
+            return $next($request);
+        }else{
+            return response()->view('adminlogin'); 
         }
-        return $next($request);
+        
     }
 }
