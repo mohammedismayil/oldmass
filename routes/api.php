@@ -21,3 +21,7 @@ Route::get('/home', function () {
     return response('Hello World', 200)
                   ->header('Content-Type', 'text/plain');
 });
+
+Route::get('/flights','App\Http\Controllers\FlightsController@getAllFlights');
+
+// INSERT INTO `flights` (`id`, `name`, `airline`, `created_at`, `updated_at`) VALUES ('2', 'Malaysia', 'MH320', '2021-12-08 12:59:15', '2021-12-12 12:59:15')
