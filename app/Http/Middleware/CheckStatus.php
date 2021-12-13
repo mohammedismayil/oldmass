@@ -17,7 +17,7 @@ class CheckStatus
     public function handle(Request $request, Closure $next)
     {
 
-        // dd($request);
+        dd($request->session()->get('isAdminLoggedIn'));
         if ($request->session()->get('isAdminLoggedIn')=='true') {
             
             return $next($request);
