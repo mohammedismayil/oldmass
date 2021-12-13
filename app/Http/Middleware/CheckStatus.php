@@ -17,13 +17,15 @@ class CheckStatus
     public function handle(Request $request, Closure $next)
     {
 
-        dd($request->session()->get('isAdminLoggedIn'));
+        // dd($request->session()->get('isAdminLoggedIn'));
+
+
         if ($request->session()->get('isAdminLoggedIn')=='true') {
-            
+
             return $next($request);
         }else{
-            return response()->view('adminlogin'); 
+            return response()->view('adminlogin');
         }
-        
+
     }
 }
