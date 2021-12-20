@@ -30,11 +30,11 @@
 <div class=" py-5 content-center justify-center w-1/2 ">
     <div class="py-2 content-center justify-center w-full m-auto">
         <h3>Email</h3>
-        <input class="border border-black rounded-full w-full m-auto h-8 pl-3">
+        <input class="border border-black rounded-full w-full m-auto h-8 pl-3" id="email" name="email" required autofocus >
     </div>
     <div class="py-2 content-center justify-center w-full m-auto">
         <h3>Password</h3>
-        <input class="border border-black rounded-full w-full m-auto h-8 pl-3">
+        <input class="border border-black rounded-full w-full m-auto h-8 pl-3" name="password"required autofocus id="password">
     </div>
 </div>
 </div>

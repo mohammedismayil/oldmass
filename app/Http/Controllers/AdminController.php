@@ -10,10 +10,10 @@ class AdminController extends Controller
 
     function loginAdmin(Request $request){
 
-        dd($request);
+        // dd($request);
 if ($request->input('email') == 'admin@gmail.com' && $request->input('password') == '123456') {
 
-    dd($request);
+    // dd($request);
     $request->session()->put('isAdminLoggedIn','true');
     // dd($request->session()->get('isAdminLoggedIn'));
     return response()->view('admin'); 

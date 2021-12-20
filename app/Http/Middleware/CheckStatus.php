@@ -18,7 +18,7 @@ class CheckStatus
     {
 
         // dd($request->session()->get('isAdminLoggedIn'));
-
+        // dd($request);
 
         if ($request->session()->get('isAdminLoggedIn')=='true') {
 
