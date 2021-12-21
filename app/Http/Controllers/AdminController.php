@@ -15,6 +15,7 @@ if ($request->input('email') == 'admin@gmail.com' && $request->input('password')
 
     // dd($request);
     $request->session()->put('isAdminLoggedIn','true');
+    $request->session()->put('isAdminAuthorised','true');
     // dd($request->session()->get('isAdminLoggedIn'));
     return response()->view('admin'); 
 

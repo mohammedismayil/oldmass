@@ -22,6 +22,7 @@ Route::get('/admin', function () {
     return view('admin');
 })->middleware('checkStatus');
 
-Route::get('/admin/products', 'App\Http\Controllers\ProductsController@getAllProducts');
+Route::get('/admin/products','App\Http\Controllers\ProductsController@getAllProducts')->middleware('AdminAuthorised');
 
 Route::post('/loginadmin','App\Http\Controllers\AdminController@loginAdmin');
+
