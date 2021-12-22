@@ -10,7 +10,23 @@ class ProductsController extends Controller
 
      public function getAllProducts(){
         $post = Product::all();
-        
-         return response()->json(['response' => 'success', 'products' => $post ]);
+     //    $name = $post[0]->name;
+     //    dd($name);
+     $postcopy = $post;
+
+
+     $postcpy = $postcopy;
+     
+     $postcpy[0]->name = "Rolex watch";
+     // dd($postcpy[0]->name);
+     dd($post[0]->name);
+
+     // dd($postcopy);
+
+     
+         return response()->json(['response' => 'success',
+         'message'=>'string',
+         'fakeproducts' => $postcpy, 
+         'products' => $post ]);
     }
 }
