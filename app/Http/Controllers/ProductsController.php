@@ -10,23 +10,20 @@ class ProductsController extends Controller
 
      public function getAllProducts(){
         $post = Product::all();
-     //    $name = $post[0]->name;
-     //    dd($name);
-     $postcopy = $post;
 
+        $postcpy = $post;
 
-     $postcpy = $postcopy;
-     
-     $postcpy[0]->name = "Rolex watch";
-     // dd($postcpy[0]->name);
-     dd($post[0]->name);
+        $postcpy[0]->name = "Rolex dddd";
+        // dd($postcpy[0]->name);
+        //  dd($post[0]->name);
 
-     // dd($postcopy);
+        // dd($postcopy);
+        $post2 = Product::all();
 
-     
          return response()->json(['response' => 'success',
          'message'=>'string',
-         'fakeproducts' => $postcpy, 
-         'products' => $post ]);
+            'fakeproducts' => $postcpy,
+            'products' => $post2
+        ]);
     }
 }
